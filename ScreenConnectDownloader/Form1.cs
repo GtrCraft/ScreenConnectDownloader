@@ -30,8 +30,8 @@ namespace ScreenConnectDownloader
 
         private void btnDownload_Click(object sender, EventArgs e)
         {
-		    ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;	
-            string host = "https://remote.onsitedentalsystems.com";
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            string host = "https://hype.screenconnect.com";
             string supportCode = txtSupportCode.Text.Trim();
 
             if (string.IsNullOrEmpty(supportCode))
@@ -95,7 +95,7 @@ namespace ScreenConnectDownloader
 
                 // Step 3: LogInitiatedJoin Call
                 string joinPath = "WindowsDesktop[6.0-X]:Chrome:Default/WindowsInstallerDownloadZip";
-                cookies.Add(new Cookie("settings", "{\"joinPath\":\"" + joinPath + "\"}", "/", "remote.onsitedentalsystems.com"));
+                cookies.Add(new Cookie("settings", "{\"joinPath\":\"" + joinPath + "\"}", "/", "hype.screenconnect.com"));
 
                 string logPayload = "[\"" + guid + "\",2,\"(" + joinPath + ") Mozilla/5.0\"]";
                 var logReq = (HttpWebRequest)WebRequest.Create(host + "/Services/PageService.ashx/LogInitiatedJoin");
@@ -176,6 +176,16 @@ namespace ScreenConnectDownloader
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPrompt_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("ScreenConnectDownloader")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Ondersteuning op afstand")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Hype Automatisering")]
 [assembly: AssemblyProduct("ScreenConnectDownloader")]
 [assembly: AssemblyCopyright("Copyright ©  2025")]
 [assembly: AssemblyTrademark("")]
