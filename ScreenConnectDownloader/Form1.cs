@@ -30,6 +30,7 @@ namespace ScreenConnectDownloader
 
         private void btnDownload_Click(object sender, EventArgs e)
         {
+		    ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;	
             string host = "https://remote.onsitedentalsystems.com";
             string supportCode = txtSupportCode.Text.Trim();
 
